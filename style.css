@@ -207,9 +207,9 @@ nav ul li a:hover::before{
     display: inline-block;
 }
 
-/************** ABOUT SECTION **************/
-/************** ABOUT SECTION **************/
-/************** ABOUT SECTION **************/
+/*************** ABOUT SECTION ***************/
+/*************** ABOUT SECTION **************/
+/*************** ABOUT SECTION **************/
 .about-section{
     background-color: var(--light-grayish-blue);
 }
