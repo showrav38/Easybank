@@ -395,7 +395,7 @@ or equal 501px */
         z-index: 1;
     }
 
-    /** MEDIA QUERY FOR ABOUT SECTION **/
+    /*** MEDIA QUERY FOR ABOUT SECTION ***/
 
     .about-text{
         width: 50%;
