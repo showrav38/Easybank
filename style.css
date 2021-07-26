@@ -19,7 +19,7 @@ body{
 p{
     font-size: 1.6rem;
     color: var(--grayish-blue);
-    line-height: 1.6;
+    line-height: 2rem;
 }
 
 section{
@@ -57,9 +57,9 @@ section{
     margin-bottom: 5rem;
 }
 
-/*---- HEADER ----*/
-/*--- HEADER ---*/
-/*--- HEADER ---*/
+/*------------ HEADER -----------*/
+/*------------ HEADER -----------*/
+/*------------ HEADER -----------*/
 header{
     width: 100%;
     height: 7.5rem;
@@ -131,6 +131,7 @@ nav ul li a:hover::before{
 }
 
 .btn{
+    display: inline-block;
     font-size: 1.5rem;
     color: var(--white);
     font-weight: 700;
@@ -148,13 +149,110 @@ nav ul li a:hover::before{
     transform: scaleX(1.1);
 }
 
+
+/***** WELCOME SECTION *****/
+/***** WELCOME SECTION *****/
+/***** WELCOME SECTION *****/
+.welcome-section{
+    width: 100%;
+    background-color: var(--very-light-gray);
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.welcome-image{
+    display: inline-block;
+    text-align: center;
+    height: 38rem;
+}
+
+.welcome-image::before{
+    content: "";
+    position: absolute;
+    top: -12rem;
+    right: 0;
+    width: 60rem;
+    height: 70rem;
+    background-image: url(./images/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* z-index: 1; */
+}
+
+.welcome-image img{
+    width: 100%;
+    height: 48rem;
+    z-index: 2;
+    transform: translateY(-15rem);
+}
+
+.welcome-text{
+    text-align: center;
+}
+
+.heading{
+    font-weight: normal;
+    color: var(--dark-blue);
+    line-height: 4.5rem;
+}
+
+.welcome-text h1{
+    font-size: 3.5rem;
+}
+
+.welcome-text h1 span{
+    display: inline-block;
+}
+
+/************** ABOUT SECTION **************/
+/************** ABOUT SECTION **************/
+/************** ABOUT SECTION **************/
+.about-section{
+    background-color: var(--light-grayish-blue);
+}
+
+.about-text{
+    width: 100%;
+    text-align: center;
+}
+
+.heading-secondary{
+    font-size: 3rem;
+}
+
+.about-item{
+    /* display: flex;
+    justify-content: ; */
+    /* flex-direction: row-reverse; */
+    /* text-align: left; */
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap: 4rem 1rem;
+}
+
+.about-item-box{
+    display: inline-block;
+    text-align: center;
+}
+
+.heading-tertiary{
+    font-size: 2rem;
+}
+
+
+
 /*********MEDIA QUERY*********/
 /*********MEDIA QUERY*********/
 
 
 /* MOBILE RESPONSIVE MENU QUERIES */
+
+/* every dimension or device less or equal 832px */
 @media screen and (max-width:832px) {
-    .btn{
+    nav .btn{
         display: none;
     }
 
@@ -223,3 +321,88 @@ nav ul li a:hover::before{
         transition: .4s ease-out;
     }
 }
+
+
+
+
+/*---------------- FROM MOBILE TO TABLET -----------------*/
+/*---------------- FROM MOBILE TO TABLET -----------------*/
+
+
+/* every dimension or device which is greater 
+or equal 501px */
+@media screen and (min-width: 501px) and (max-width: 769px) {
+
+
+    /* MEDIA QUERY FOR WELCOME SECTION */
+    /* MEDIA QUERY FOR WELCOME SECTION */
+    /* .welcome-image{
+        display: inline-block;
+        text-align: center;
+        height: 38rem;
+    } */
+
+    .welcome-image::before{
+        top: -28rem;
+        right: 0;
+        width: 65rem;
+        height: 83rem;
+        background-image: url(./images/bg-intro-desktop.svg);
+    }
+
+    .welcome-image img{
+        width: 70%;
+        height: 48rem;
+        transform: translateY(-15rem);
+    }
+
+}
+
+
+/***************** FROM TABLET TO LAPTOP *****************/
+
+@media screen and (min-width: 770px){
+
+    /* MEDIA QUERY FOR WELCOME SECTION */
+    .welcome-section{
+        padding: 3rem 0;
+    }
+
+    .welcome{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .welcome-image::before{
+        display: none;
+    }
+    .welcome-text{
+        text-align: left;
+        padding: 5rem 0;
+        width: 85%;
+    }
+    .welcome-image{
+        width: 100%;
+        position: relative;
+    }
+    .welcome-image img{
+        position: absolute;
+        width: 40rem;
+        height: 65rem;
+        top: -3rem;
+        right: 0;
+        z-index: 1;
+    }
+
+    /* MEDIA QUERY FOR ABOUT SECTION */
+
+    .about-text{
+        width: 50%;
+        text-align: left;
+    }
+    .about-item-box{
+        text-align: left;
+    }
+}
+
