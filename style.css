@@ -242,6 +242,96 @@ nav ul li a:hover::before{
     font-size: 2rem;
 }
 
+/************* ARTICLE SECTION  *************/
+/************* ARTICLE SECTION  *************/
+/************* ARTICLE SECTION  *************/
+
+.article-section {
+    background-color: var(--very-light-gray);
+}
+
+.article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    row-gap: 4rem;
+    column-gap: 2rem;
+}
+
+.article-box {
+    background-color: var(--white);
+    background-origin: 1px solid transparent;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(58, 56, 56, 0.692);
+}
+
+.tess{
+    grid-column: 1.5/3.5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+    vertical-align: middle;
+}
+.article-box img {
+    width: 100%;
+    height: 23.5rem;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+}
+
+.article-content {
+    padding: 2rem;
+}
+
+.article-author {
+    font-size: 1.2rem;
+}
+
+.article-heading {
+    font-size: 1.7rem;
+    font-weight: normal;
+    color: var(--dark-blue);
+}
+
+.article-excerpt {
+    font-size: 1.3rem;
+}
+
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */
+footer {
+    padding: 5rem 0;
+    background-color: var(--dark-blue);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    row-gap: 4rem;
+    column-gap: 2rem;
+}
+
+.footer-icons a {
+    padding-right: 1rem;
+}
+
+.footer-links ul li {
+    list-style: none;
+    padding-bottom: 1.5rem;
+}
+
+.footer-links ul li a {
+    color: var(--grayish-blue);
+}
+
+.footer-links ul li a:hover {
+    color: var(--lime-green);
+}
 
 
 /*********MEDIA QUERY*********/
@@ -406,3 +496,23 @@ or equal 501px */
     }
 }
 
+/************** ANIMATION *************/
+/************** ANIMATION *************/
+/************** ANIMATION *************/
+/************** ANIMATION *************/
+
+@keyframes moveUP {
+    0% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.moveUP {
+    animation: moveUP .8s 1 linear;
+}
