@@ -225,7 +225,8 @@ nav ul li a:hover::before{
 
 .about-item{
     /* display: flex;
-    justify-content: ; */
+    justify-content: center; */
+    /* flex-wrap: wrap; */
     /* flex-direction: row-reverse; */
     /* text-align: left; */
     display: grid;
@@ -493,6 +494,7 @@ or equal 501px */
     }
     .about-item-box{
         text-align: left;
+        margin-left: 100px;
     }
 }
 
